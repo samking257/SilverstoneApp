@@ -1,0 +1,63 @@
+@model WeatherApp.Models.WeatherInfoModel
+
+@{
+    ViewData["Title"] = "Weather";
+}
+
+<div class="text-center">
+    <h5>@Html.DisplayFor(model => model.City), @Html.DisplayFor(model => model.Country)</h5>
+    <table style="width: fit-content;" class="table mx-auto">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentTemp)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.CurrentTemp)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxTemp)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.MaxTemp)
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MinTemp)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.MinTemp)
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Humidity)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Humidity)
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sunrise)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Sunrise)
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sunset)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Sunset)
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

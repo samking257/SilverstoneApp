@@ -1,0 +1,64 @@
+@model IEnumerable<WeatherApp.Models.WeatherInfoModel>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CurrentTemp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaxTemp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MinTemp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Humidity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sunrise)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sunset)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <th>
+                    @Html.DisplayFor(modelItem => item.City)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.CurrentTemp)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.MaxTemp)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.MinTemp)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Humidity)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Sunrise)
+                </th>
+                <th>
+                    @Html.DisplayFor(modelItem => item.Sunset)
+                </th>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
